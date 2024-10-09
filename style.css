@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+
+:root {
+  --Primary-Bright-orange: hsl(31, 77%, 52%);
+  --Primary-Dark-cyan: hsl(184, 100%, 22%);
+  --Primary-Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Neutral-Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Neutral-Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+  --font-size: 15px;
+  --font-heading: 26px;
+
+  --ff-body: "Lexend Deca", sans-serif;
+  --ff-heading: "Big Shoulders Display", sans-serif;
+  --ff-400: 400;
+  --ff-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-size);
+  font-family: var(--ff-body);
+}
+
+.wrapper {
+  max-width: 70em;
+  margin: 8rem auto;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+.card {
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+/* Typography */
+.title {
+  font-size: var(--font-heading);
+  font-family: var(--ff-heading);
+  font-weight: var(--ff-700);
+  color: var(--Neutral-Very-light-gray-background-headings-buttons);
+  margin: 13px 0;
+}
+
+.desc {
+  color: var(--Neutral-Transparent-white-paragraphs);
+  letter-spacing: 1.5;
+  font-size: 16px;
+  margin: 35px 0;
+}
+
+button {
+  background-color: var(--Neutral-Very-light-gray-background-headings-buttons);
+  border-radius: 25px;
+  padding: 10px;
+  margin: 45px 0;
+  border: none;
+}
+
+.orange {
+  background-color: var(--Primary-Bright-orange);
+}
+
+.blue {
+  background-color: var(--Primary-Dark-cyan);
+}
+
+.cyan {
+  background-color: var(--Primary-Very-dark-cyan);
+}
+
+.txtorange {
+  color: var(--Primary-Bright-orange);
+}
+.txtblue {
+  color: var(--Primary-Dark-cyan);
+}
+.txtcyan {
+  color: var(--Primary-Very-dark-cyan);
+}
+
+/* media queris */
+@media screen and (max-width: 650px) {
+  .wrapper {
+    margin: 1rem 0;
+  }
+  .container {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    margin: 1rem 0;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
